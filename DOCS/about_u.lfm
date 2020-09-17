@@ -1,0 +1,8 @@
+object frmAbout: TfrmAbout
+  Left = 374
+  Height = 240
+  Top = 264
+  Width = 320
+  Caption = 'About Pattern Keeper'
+  LCLVersion = '2.0.10.0'
+end

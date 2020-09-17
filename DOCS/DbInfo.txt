@@ -1,0 +1,37 @@
+Date
+Pattern Name
+Designer
+Made for
+Needle/Hook size & type
+Yarn brand
+Fiber
+Amount used
+Colorway
+DyeLot
+Image area
+notes
+
+Modules for DB
+
+SQLite3Connection
+SQLTransaction
+SQLQuery
+DataSource
+Datacontrols for fields etc.
+
+
+do the following
+
+1) drop a TOpenPictureDialog on your form.
+2) doubleclick on the onclick of the DBImage1 and paste this code.
+Code: [Select]
+  if OpenPictureDialog1.Execute then begin
+    DBImage1.Picture.LoadFromFile(OpenPictureDialog1.FileName);
+  end;
+3)run your application
+4) select any record you like and press the edit button on the dbnavigator.
+5) click on your image and select any image you like.
+6) press the post button on the dbnavigator.
+
+change records in the grid and see if re visiting the specific record it shows the new image.
+There is a small chance that you must use persistent fields namely after you create the fields in the designer select the photo field and change the blobtype to ftgraphic and try again. Are you sure that the subtype 0 on the firebird blob is for binary data and not for text? I ask because the default setting comes back as ftwidestring instead of ftgraphic and makes to want to check the subtype meaning again.

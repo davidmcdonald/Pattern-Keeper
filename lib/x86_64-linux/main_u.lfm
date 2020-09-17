@@ -1,0 +1,550 @@
+object frmMain: TfrmMain
+  Left = 237
+  Height = 701
+  Top = 37
+  Width = 1091
+  Caption = 'Pattern Keeper'
+  ClientHeight = 701
+  ClientWidth = 1091
+  OnClose = FormClose
+  OnCreate = FormCreate
+  Position = poDesktopCenter
+  LCLVersion = '2.0.10.0'
+  object pnlFunctions: TPanel
+    Left = 0
+    Height = 64
+    Top = 0
+    Width = 1091
+    Align = alTop
+    ClientHeight = 64
+    ClientWidth = 1091
+    Color = clBlack
+    ParentColor = False
+    TabOrder = 0
+    object lblPk: TLabel
+      Left = 8
+      Height = 59
+      Top = 8
+      Width = 52
+      Caption = 'PK'
+      Font.Color = clRed
+      Font.Height = -40
+      Font.Name = 'Crafty Girls'
+      Font.Style = [fsBold]
+      ParentColor = False
+      ParentFont = False
+    end
+    object btnAbout: TBitBtn
+      Left = 848
+      Height = 30
+      Top = 24
+      Width = 75
+      Caption = 'About'
+      TabOrder = 0
+    end
+  end
+  object dbPatternGrid: TDBGrid
+    Left = 8
+    Height = 100
+    Top = 589
+    Width = 1072
+    Anchors = [akLeft, akRight, akBottom]
+    Color = clWindow
+    Columns = <    
+      item
+        MinSize = 50
+        Title.Caption = 'Pattern Name'
+        Width = 95
+        FieldName = 'pName'
+      end    
+      item
+        Title.Caption = 'Date'
+        Width = 42
+        FieldName = 'pDate'
+      end    
+      item
+        Title.Caption = 'Designer'
+        Width = 67
+        FieldName = 'pDesigner'
+      end    
+      item
+        Title.Caption = 'Made for'
+        Width = 67
+        FieldName = 'pMadefor'
+      end    
+      item
+        MinSize = 40
+        Title.Caption = 'Needle/Hook Size'
+        Width = 117
+        FieldName = 'pNeedle'
+      end    
+      item
+        Title.Caption = 'Yarn Brand'
+        Width = 79
+        FieldName = 'pYarnBrand'
+      end    
+      item
+        Title.Caption = 'Yarn Fiber'
+        Width = 74
+        FieldName = 'pFiber'
+      end    
+      item
+        Title.Caption = 'Amount Used'
+        Width = 93
+        FieldName = 'pAmountused'
+      end    
+      item
+        Title.Caption = 'Colorway'
+        Width = 70
+        FieldName = 'pColorway'
+      end    
+      item
+        Title.Caption = 'Dyelot'
+        Width = 53
+        FieldName = 'pDyelot'
+      end    
+      item
+        Title.Caption = 'Image'
+        Width = 51
+        FieldName = 'pImage'
+      end    
+      item
+        Title.Caption = 'Important Info'
+        Width = 98
+        FieldName = 'pImportant'
+      end    
+      item
+        Title.Caption = 'Notes'
+        Width = 50
+        FieldName = 'pNotes'
+      end>
+    DataSource = DBDatasource
+    Options = [dgEditing, dgTitles, dgIndicator, dgColumnResize, dgColumnMove, dgColLines, dgRowLines, dgTabs, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit, dgAutoSizeColumns]
+    TabOrder = 1
+  end
+  object lblDate: TLabel
+    Left = 19
+    Height = 19
+    Top = 83
+    Width = 40
+    Caption = 'Date: '
+    Font.Height = -15
+    Font.Style = [fsBold]
+    ParentColor = False
+    ParentFont = False
+  end
+  object lblPatName: TLabel
+    Left = 184
+    Height = 19
+    Top = 83
+    Width = 100
+    Caption = 'Pattern Name:'
+    Font.Height = -15
+    Font.Style = [fsBold]
+    ParentColor = False
+    ParentFont = False
+  end
+  object lblColorway: TLabel
+    Left = 184
+    Height = 19
+    Top = 224
+    Width = 70
+    Caption = 'Colorway:'
+    Font.Height = -15
+    Font.Style = [fsBold]
+    ParentColor = False
+    ParentFont = False
+  end
+  object lblDate3: TLabel
+    Left = 464
+    Height = 19
+    Top = 83
+    Width = 66
+    Caption = 'Designer:'
+    Font.Height = -15
+    Font.Style = [fsBold]
+    ParentColor = False
+    ParentFont = False
+  end
+  object lblYarnBrand: TLabel
+    Left = 184
+    Height = 19
+    Top = 152
+    Width = 80
+    Caption = 'Yarn brand:'
+    Font.Height = -15
+    Font.Style = [fsBold]
+    ParentColor = False
+    ParentFont = False
+  end
+  object lblImportant: TLabel
+    Left = 19
+    Height = 19
+    Top = 296
+    Width = 159
+    Caption = 'Important information:'
+    Font.Height = -15
+    Font.Style = [fsBold]
+    ParentColor = False
+    ParentFont = False
+  end
+  object lblAmountused: TLabel
+    Left = 19
+    Height = 19
+    Top = 224
+    Width = 95
+    Caption = 'Amount used:'
+    Font.Height = -15
+    Font.Style = [fsBold]
+    ParentColor = False
+    ParentFont = False
+  end
+  object lblFiber: TLabel
+    Left = 464
+    Height = 19
+    Top = 152
+    Width = 40
+    Caption = 'Fiber:'
+    Font.Height = -15
+    Font.Style = [fsBold]
+    ParentColor = False
+    ParentFont = False
+  end
+  object lblNeedle: TLabel
+    Left = 19
+    Height = 19
+    Top = 152
+    Width = 125
+    Caption = 'Needle/Hook size:'
+    Font.Height = -15
+    Font.Style = [fsBold]
+    ParentColor = False
+    ParentFont = False
+  end
+  object lblMadefor: TLabel
+    Left = 736
+    Height = 19
+    Top = 83
+    Width = 66
+    Caption = 'Made for:'
+    Font.Height = -15
+    Font.Style = [fsBold]
+    ParentColor = False
+    ParentFont = False
+  end
+  object lblimage: TLabel
+    Left = 744
+    Height = 19
+    Top = 152
+    Width = 101
+    Caption = 'Pattern image:'
+    Font.Height = -15
+    Font.Style = [fsBold]
+    ParentColor = False
+    ParentFont = False
+  end
+  object patNameEdit: TDBEdit
+    Left = 184
+    Height = 28
+    Top = 111
+    Width = 256
+    DataField = 'pName'
+    DataSource = DBDatasource
+    CharCase = ecNormal
+    MaxLength = 0
+    TabOrder = 2
+  end
+  object designEdit: TDBEdit
+    Left = 464
+    Height = 28
+    Top = 111
+    Width = 256
+    DataField = 'pDesigner'
+    DataSource = DBDatasource
+    CharCase = ecNormal
+    MaxLength = 0
+    TabOrder = 3
+  end
+  object madeforEdit: TDBEdit
+    Left = 736
+    Height = 28
+    Top = 111
+    Width = 256
+    DataField = 'pMadefor'
+    DataSource = DBDatasource
+    CharCase = ecNormal
+    MaxLength = 0
+    TabOrder = 4
+  end
+  object needleEdit: TDBEdit
+    Left = 19
+    Height = 28
+    Top = 183
+    Width = 139
+    DataField = 'pNeedle'
+    DataSource = DBDatasource
+    CharCase = ecNormal
+    MaxLength = 0
+    TabOrder = 5
+  end
+  object yarnbEdit: TDBEdit
+    Left = 184
+    Height = 28
+    Top = 183
+    Width = 256
+    DataField = 'pYarnBrand'
+    DataSource = DBDatasource
+    CharCase = ecNormal
+    MaxLength = 0
+    TabOrder = 6
+  end
+  object fiberEdit: TDBEdit
+    Left = 464
+    Height = 28
+    Top = 184
+    Width = 256
+    DataField = 'pFiber'
+    DataSource = DBDatasource
+    CharCase = ecNormal
+    MaxLength = 0
+    TabOrder = 7
+  end
+  object patternImage: TDBImage
+    Left = 744
+    Height = 250
+    Top = 183
+    Width = 250
+    AutoSize = True
+    Center = True
+    Constraints.MaxHeight = 250
+    Constraints.MaxWidth = 250
+    DataField = 'pImage'
+    DataSource = DBDatasource
+  end
+  object amountEdit: TDBEdit
+    Left = 19
+    Height = 28
+    Top = 256
+    Width = 141
+    DataField = 'pAmountused'
+    DataSource = DBDatasource
+    CharCase = ecNormal
+    MaxLength = 0
+    TabOrder = 8
+  end
+  object lblDyelot: TLabel
+    Left = 464
+    Height = 19
+    Top = 224
+    Width = 57
+    Caption = 'Dye Lot:'
+    Font.Height = -15
+    Font.Style = [fsBold]
+    ParentColor = False
+    ParentFont = False
+  end
+  object colorwayEdit: TDBEdit
+    Left = 184
+    Height = 28
+    Top = 256
+    Width = 256
+    DataField = 'pColorway'
+    DataSource = DBDatasource
+    CharCase = ecNormal
+    MaxLength = 0
+    TabOrder = 9
+  end
+  object dyelotEdit: TDBEdit
+    Left = 464
+    Height = 28
+    Top = 256
+    Width = 256
+    DataField = 'pDyelot'
+    DataSource = DBDatasource
+    CharCase = ecNormal
+    MaxLength = 0
+    TabOrder = 10
+  end
+  object lblNotes: TLabel
+    Left = 19
+    Height = 19
+    Top = 414
+    Width = 141
+    Caption = 'Pattern Instructions:'
+    Font.Height = -15
+    Font.Style = [fsBold]
+    ParentColor = False
+    ParentFont = False
+  end
+  object importantEdit: TDBMemo
+    Left = 19
+    Height = 73
+    Top = 328
+    Width = 702
+    DataField = 'pImportant'
+    DataSource = DBDatasource
+    ScrollBars = ssAutoVertical
+    TabOrder = 11
+  end
+  object notesEdit: TDBMemo
+    Left = 19
+    Height = 90
+    Top = 440
+    Width = 975
+    DataField = 'pNotes'
+    DataSource = DBDatasource
+    ScrollBars = ssAutoVertical
+    TabOrder = 12
+  end
+  object DBNavigator1: TDBNavigator
+    Left = 19
+    Height = 20
+    Top = 544
+    Width = 421
+    BevelOuter = bvNone
+    ChildSizing.EnlargeHorizontal = crsScaleChilds
+    ChildSizing.EnlargeVertical = crsScaleChilds
+    ChildSizing.ShrinkHorizontal = crsScaleChilds
+    ChildSizing.ShrinkVertical = crsScaleChilds
+    ChildSizing.Layout = cclLeftToRightThenTopToBottom
+    ChildSizing.ControlsPerLine = 100
+    ClientHeight = 20
+    ClientWidth = 421
+    DataSource = DBDatasource
+    Options = []
+    TabOrder = 13
+  end
+  object dateEdit: TDBDateEdit
+    Left = 19
+    Height = 28
+    Top = 111
+    Width = 141
+    CalendarDisplaySettings = [dsShowHeadings, dsShowDayNames]
+    DateOrder = doMDY
+    ButtonWidth = 23
+    NumGlyphs = 1
+    MaxLength = 10
+    TabOrder = 14
+    Text = '  /  /    '
+    DataField = 'pDate'
+    DataSource = DBDatasource
+  end
+  object addImgBtn: TButton
+    Left = 856
+    Height = 25
+    Top = 144
+    Width = 136
+    Caption = 'Add Image'
+    OnClick = addImgBtnClick
+    TabOrder = 15
+  end
+  object DBConnection: TSQLite3Connection
+    Connected = True
+    LoginPrompt = False
+    DatabaseName = '/home/david/Development/Pascal/Pattern Keeper/Pkdb.db'
+    KeepConnection = False
+    Transaction = DBTransaction
+    AlwaysUseBigint = False
+    Left = 472
+    Top = 536
+  end
+  object DBQuery: TSQLQuery
+    PacketRecords = -1
+    FieldDefs = <    
+      item
+        Name = 'id'
+        DataType = ftInteger
+        Precision = -1
+      end    
+      item
+        Name = 'pDate'
+        DataType = ftDate
+        Precision = -1
+      end    
+      item
+        Name = 'pName'
+        DataType = ftMemo
+        Precision = -1
+      end    
+      item
+        Name = 'pDesigner'
+        DataType = ftMemo
+        Precision = -1
+      end    
+      item
+        Name = 'pMadefor'
+        DataType = ftMemo
+        Precision = -1
+      end    
+      item
+        Name = 'pNeedle'
+        DataType = ftMemo
+        Precision = -1
+      end    
+      item
+        Name = 'pYarnBrand'
+        DataType = ftMemo
+        Precision = -1
+      end    
+      item
+        Name = 'pFiber'
+        DataType = ftMemo
+        Precision = -1
+      end    
+      item
+        Name = 'pAmountused'
+        DataType = ftMemo
+        Precision = -1
+      end    
+      item
+        Name = 'pDyelot'
+        DataType = ftMemo
+        Precision = -1
+      end    
+      item
+        Name = 'pNotes'
+        DataType = ftMemo
+        Precision = -1
+      end    
+      item
+        Name = 'pImage'
+        DataType = ftBlob
+        Precision = -1
+      end    
+      item
+        Name = 'pColorway'
+        DataType = ftMemo
+        Precision = -1
+      end    
+      item
+        Name = 'pImportant'
+        DataType = ftMemo
+        Precision = -1
+      end>
+    Database = DBConnection
+    Transaction = DBTransaction
+    SQL.Strings = (
+      'SELECT * FROM Patterns'
+    )
+    Options = [sqoKeepOpenOnCommit, sqoAutoApplyUpdates, sqoAutoCommit, sqoRefreshUsingSelect]
+    Params = <>
+    UpdateMode = upWhereAll
+    Left = 552
+    Top = 536
+  end
+  object DBTransaction: TSQLTransaction
+    Active = True
+    Database = DBConnection
+    Left = 632
+    Top = 536
+  end
+  object DBDatasource: TDataSource
+    DataSet = DBQuery
+    Left = 720
+    Top = 536
+  end
+  object OpenPictureDialog1: TOpenPictureDialog
+    Left = 1021
+    Top = 532
+  end
+end
