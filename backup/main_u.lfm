@@ -315,11 +315,17 @@ object frmMain: TfrmMain
     Top = 183
     Width = 250
     AutoSize = True
+    BorderSpacing.Left = 1
+    BorderSpacing.Right = 1
+    BorderSpacing.Bottom = 1
+    BorderSpacing.Around = 1
     Center = True
     Constraints.MaxHeight = 250
     Constraints.MaxWidth = 250
     DataField = 'pImage'
     DataSource = DBDatasource
+    Proportional = True
+    Stretch = True
   end
   object amountEdit: TDBEdit
     Left = 19
@@ -432,7 +438,7 @@ object frmMain: TfrmMain
   object addImgBtn: TButton
     Left = 856
     Height = 25
-    Top = 146
+    Top = 144
     Width = 136
     Caption = 'Add Image'
     OnClick = addImgBtnClick
